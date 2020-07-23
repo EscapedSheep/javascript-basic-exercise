@@ -12,7 +12,7 @@ export function range(start, end) {
   const dirction = end - start;
   const step = dirction > 0 ? 1 : -1;
   let result = [];
-  for (let i = start; dirction > 0 ? i < end : i > end; i+=step) {
+  for (let i = start; dirction > 0 ? i < end : i > end; i += step) {
     result.push(i);
   }
   return result;
