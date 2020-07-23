@@ -23,7 +23,6 @@ export default function formatNumber(number, option) {
     if (numsArray[1].length < 2) {
       return `${prefix}${numToStr}.0`;
     }
-    return `${prefix}${numToStr}`;
   }
-  throw new Error('Please delete this line and implement the function');
+  return `${prefix}${numToStr}`;
 }
