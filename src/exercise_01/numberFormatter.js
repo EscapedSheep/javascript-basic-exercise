@@ -7,6 +7,23 @@ export default function formatNumber(number, option) {
   //
   // * Please implement the function and pass all the tests in format_number_spec.js.
   // * Please do NOT modify the signature of the function.
+  let prefix = '';
+  if (option !== undefined) {
+    prefix = option.currency ? '$ ' : '';
+  }
 
+  const num = number.toFixed(2);
+  const numToStr = num.toString();
+  const numsArray = numToStr.split('.');
+  if (numsArray.length === 1) {
+    return `${prefix}${numToStr}.00`;
+  }
+
+  if (numsArray.length > 1) {
+    if (numsArray[1].length < 2) {
+      return `${prefix}${numToStr}.0`;
+    }
+    return `${prefix}${numToStr}`;
+  }
   throw new Error('Please delete this line and implement the function');
 }
