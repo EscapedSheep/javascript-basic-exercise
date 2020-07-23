@@ -12,7 +12,7 @@ export default function countCharacter(string, prediction) {
 
   let count = 0;
 
-  for (let i = 0; i < string.length; i++) {
+  for (let i = 0; i < string.length; i += 1) {
     if (prediction(string[i])) {
       count += 1;
     }
