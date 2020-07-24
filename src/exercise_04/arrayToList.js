@@ -7,7 +7,7 @@ export default function arrayToList(array) {
   // * Please do NOT modify the signature of the function.
 
   if (array === null || array === undefined) { throw 'Creating list from undefined array'; }
-  if (array.length === 0) { throw 'Creating list from empty array' }
+  if (array.length === 0) { throw 'Creating list from empty array'; }
 
   class LinkedList {
     constructor(value, next = null) {
